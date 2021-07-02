@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social li {
+  margin-right: 0.75rem;
+}
+
+.facebook,
+.twitter,
+.linkedin {
+  color: #010101;
+  transition: color ease 0.2s;
+}
+
+.facebook:hover,
+.facebook:focus {
+  fill: #4267b2;
+}
+
+.twitter:hover,
+.twitter:focus {
+  fill: #1da1f2;
+}
+
+.linkedin:hover,
+.linkedin:focus {
+  fill: #0072b1;
+}

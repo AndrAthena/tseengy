@@ -1,0 +1,9 @@
+.hero {
+  display: flex;
+  height: calc(100vh - 56px);
+  background-image: url(../../../../public/images/hero-top-left.png), url(../../../../public/images/hero-bottom-center.png),
+    url(../../../../public/images/hero-right-center.png), url(../../../../public/images/hero-bg.png);
+  background-position: top 5% left 5%, bottom 5% left 25%, right 5% center;
+  background-size: 150px, 150px, 75px, cover;
+  background-repeat: no-repeat;
+}
