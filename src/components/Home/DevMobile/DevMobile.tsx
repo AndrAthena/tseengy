@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import picto from '../../../../public/images/heading-picto.svg';
-import cls from './devweb.module.css';
+import cls from './devmobile.module.css';
 
-export default function DevWeb() {
+export default function DevMobile() {
   return (
-    <div id="web" className={`${cls['dev-web']} full-height`}>
+    <div id="mobile" className={`${cls['dev-mobile']} full-height`}>
       <div className="container-full height-full">
-        <div className="flex height-full">
+        <div className="flex flex-r-reverse height-full">
           <div className="text-box">
             <h2 className="heading">
               <Image src={picto} width={50} height={50} />
-              <span>Développement web</span>
+              <span>Développement mobile</span>
             </h2>
             <p className="text-16">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam esse beatae iure quibusdam unde, blanditiis omnis quis maxime accusamus

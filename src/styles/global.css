@@ -54,6 +54,10 @@ p {
   display: flex;
 }
 
+.flex-r-reverse {
+  flex-direction: row-reverse;
+}
+
 .wrap {
   flex-wrap: wrap;
 }
