@@ -1,3 +1,9 @@
+import PageContainer from '../components/common/PageContainer';
+
 export default function Contact() {
-  return <p>Contact</p>;
+  return (
+    <PageContainer meta={{ title: 'Contact', desc: '' }}>
+      <p>Services</p>
+    </PageContainer>
+  );
 }

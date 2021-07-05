@@ -1,26 +1,25 @@
 import Link from 'next/link';
 import cls from './header.module.css';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import Social from '../social/Social';
+import { motion } from 'framer-motion';
 
-interface Meta {
-  title: string;
-  desc: string;
-}
-
-export default function Header({ title, desc }: Meta) {
+export default function Header() {
   const router = useRouter();
+  const animation = {
+    variants: {
+      visible: {
+        y: 0,
+      },
+      hidden: { y: '-100px' },
+    },
+    initial: 'hidden',
+    animate: 'visible',
+  };
 
   return (
     <>
-      <Head>
-        <title>Tseengy | {title}</title>
-        <meta name="desc" content={desc} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
-
-      <header id="header" className={cls.header}>
+      <motion.header id="header" className={cls.header} {...animation}>
         <div className="container-full">
           <ul className={cls.menu}>
             <li>
@@ -54,7 +53,7 @@ export default function Header({ title, desc }: Meta) {
           </div>
           <span className={cls.divider} />
         </div>
-      </header>
+      </motion.header>
     </>
   );
 }

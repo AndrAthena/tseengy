@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import picto from '../../../../public/images/heading-picto.svg';
+import TransitionSection from '../../common/TransitionSection';
 import cls from './devmobile.module.css';
 
 export default function DevMobile() {
   return (
-    <div id="mobile" className={`${cls['dev-mobile']} full-height`}>
+    <TransitionSection id="mobile" className={`${cls['dev-mobile']} full-height`}>
       <div className="container-full height-full">
         <div className="flex flex-r-reverse height-full">
           <div className="text-box">
@@ -20,6 +21,6 @@ export default function DevMobile() {
           <div className="flex aic grow"></div>
         </div>
       </div>
-    </div>
+    </TransitionSection>
   );
 }

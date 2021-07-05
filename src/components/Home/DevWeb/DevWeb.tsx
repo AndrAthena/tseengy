@@ -1,10 +1,11 @@
 import Image from 'next/image';
 import picto from '../../../../public/images/heading-picto.svg';
+import TransitionSection from '../../common/TransitionSection';
 import cls from './devweb.module.css';
 
 export default function DevWeb() {
   return (
-    <div id="web" className={`${cls['dev-web']} full-height`}>
+    <TransitionSection id="web" className={`${cls['dev-web']} full-height`}>
       <div className="container-full height-full">
         <div className="flex height-full">
           <div className="text-box">
@@ -20,6 +21,6 @@ export default function DevWeb() {
           <div className="flex aic grow"></div>
         </div>
       </div>
-    </div>
+    </TransitionSection>
   );
 }

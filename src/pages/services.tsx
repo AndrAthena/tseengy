@@ -1,5 +1,9 @@
-import Header from '../components/Header/Header';
+import PageContainer from '../components/common/PageContainer';
 
 export default function Services() {
-  return <Header title="Services" desc="" />;
+  return (
+    <PageContainer meta={{ title: 'Services', desc: '' }}>
+      <p>Services</p>
+    </PageContainer>
+  );
 }
