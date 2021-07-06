@@ -7,17 +7,17 @@ import Image from 'next/image';
 export default function Hero() {
   const { scrollY } = useViewportScroll();
   const y = useTransform(scrollY, [0, 500], [0, -150]);
-  const y2 = useTransform(scrollY, [0, 500], [0, -100]);
   const entrance = {
     variants: {
       visible: {
         y: 0,
+        opacity: 1,
+        transition: { delay: 0.65, ease: 'backOut', duration: 0.75, staggerChildren: 0.25 },
       },
-      hidden: { y: '100vh' },
+      hidden: { y: '100vh', opacity: 0 },
     },
     initial: 'hidden',
     animate: 'visible',
-    transition: { delay: 0.5 },
   };
   const animate = {
     variants: {
@@ -27,19 +27,16 @@ export default function Hero() {
       },
       hidden: {
         opacity: 0,
-        y: 20,
+        y: 50,
       },
     },
-    transition: { delay: 0.5 },
+    transition: { delay: 1.3 },
     initial: 'hidden',
     animate: 'visible',
   };
 
   return (
     <motion.div id="hero" className={`${cls.hero} full-height`} {...entrance}>
-      <motion.span style={{ y: y2 }} className={cls.parallax}>
-        <Image width={200} height={98} src={parallaxBg} role="presentation" />
-      </motion.span>
       <div className="container-full height-full">
         <div className="flex height-full">
           <div className="text-box">
