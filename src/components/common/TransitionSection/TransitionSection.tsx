@@ -8,7 +8,7 @@ interface ITransition {
 export default function TransitionSection(props: any & ITransition) {
   const { children, ...other } = props;
   const { ref, inView } = useInView({
-    threshold: 0.6,
+    threshold: 0.5,
     triggerOnce: false,
   });
 

@@ -1,0 +1,38 @@
+.apropos {
+  width: 100%;
+  position: relative;
+  display: flex;
+  height: 100vh;
+  background: url(../../../../public/images/text-apropos-bg.png), url(../../../../public/images/apropos-bg.png);
+  background-position: left center, top right 1rem;
+  background-size: 500px, cover;
+  background-repeat: no-repeat;
+}
+
+.parallax {
+  position: absolute;
+  z-index: 0;
+  bottom: 1rem;
+  left: 25%;
+}
+
+.box {
+  max-width: 540px;
+  margin: auto;
+  padding: 1rem;
+  color: #fff;
+  background-color: var(--primary);
+}
+
+.box p {
+  margin-bottom: 1rem;
+}
+
+.image {
+  position: absolute;
+  right: 1.5rem;
+  align-self: center;
+  max-width: 50%;
+  height: 500px;
+  z-index: -1;
+}

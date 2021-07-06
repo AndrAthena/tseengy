@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
+import { forwardRef, RefObject } from 'react';
 
 interface IAnimate {
   bg: string;
   y: any;
+  ref?: any;
 }
 
-export default function AnimateBg(props: IAnimate) {
-  const { bg, y } = props;
-  return <motion.div initial={{ y: 0 }} style={{ backgroundImage: `url(${bg})`, y }} className="full-bg" />;
-}
+const AnimateBg = forwardRef<HTMLDivElement, IAnimate>(({ bg, y }, ref) => (
+  <motion.div ref={ref} className="full-bg" initial={false} style={{ backgroundImage: `url(${bg})`, y }} />
+));
+
+export default AnimateBg;

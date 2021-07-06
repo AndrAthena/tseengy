@@ -1,8 +1,11 @@
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import cls from './hero.module.css';
-import parallaxBg from '../../../../public/images/hero-bottom-center.png';
+import bg from '../../../../public/images/hero-bg.png';
 import parallaxImg from '../../../../public/images/hero-parallax.svg';
 import Image from 'next/image';
+import { createRef } from 'react';
+import { useRect } from '@reach/rect';
+import AnimateBg from '../../common/AnimateBg/AnimateBg';
 
 export default function Hero() {
   const { scrollY } = useViewportScroll();
@@ -34,9 +37,13 @@ export default function Hero() {
     initial: 'hidden',
     animate: 'visible',
   };
+  const ref = createRef<HTMLDivElement>();
+  const rect = useRect(ref);
+  const y2 = rect ? useTransform(scrollY, [rect?.y, rect?.y + rect?.height], [0, 200]) : useTransform(scrollY, (v) => v / 4);
 
   return (
-    <motion.div id="hero" className={`${cls.hero} full-height`} {...entrance}>
+    <motion.div id="hero" className={`${cls.hero} full-view`} {...entrance}>
+      <AnimateBg bg={bg.src} ref={ref} y={y2} />
       <div className="container-full height-full">
         <div className="flex height-full">
           <div className="text-box">
