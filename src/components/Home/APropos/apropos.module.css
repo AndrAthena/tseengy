@@ -3,8 +3,8 @@
   position: relative;
   display: flex;
   height: 100vh;
-  background: url(../../../../public/images/text-apropos-bg.png), url(../../../../public/images/apropos-bg.png);
-  background-position: left center, top right 1rem;
+  background: url(../../../../public/images/apropos-bg.png);
+  background-position: top right 1rem;
   background-size: 500px, cover;
   background-repeat: no-repeat;
 }
@@ -16,9 +16,33 @@
   left: 25%;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 30%;
+  margin-left: -2rem;
+  color: #fff;
+  background: url(../../../../public/images/text-apropos-bg.png) center left 0 / cover no-repeat;
+}
+
+.title h2 {
+  margin-top: auto;
+  margin-bottom: 40%;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.title h2 span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
 .box {
   max-width: 540px;
   margin: auto;
+  margin-left: 2rem;
   padding: 1rem;
   color: #fff;
   background-color: var(--primary);
@@ -30,9 +54,8 @@
 
 .image {
   position: absolute;
-  right: 1.5rem;
+  right: 2rem;
   align-self: center;
   max-width: 50%;
-  height: 500px;
   z-index: -1;
 }

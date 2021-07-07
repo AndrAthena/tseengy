@@ -15,6 +15,13 @@ export default function APropos() {
     <motion.div id="apropos" className={`${cls.apropos} full-view`}>
       <div className="container-full height-full">
         <div className="flex height-full">
+          <div className={cls.title}>
+            <h2>
+              <span>A propos de</span>
+              <br />
+              Tseengy
+            </h2>
+          </div>
           <motion.div className={cls.box} ref={ref} initial={false} style={{ x: y }}>
             <h2>Inspiré du mot malgache “tsingy” qui veut dire “pointu” reflète :</h2>
             <p>Notre aspiration à utiliser les technologies et méthodologies de pointe afin de vous accompagner jusqu’au succès de votre projet</p>
